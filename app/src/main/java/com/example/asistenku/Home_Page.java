@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class Home_Page extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
+    Fragment fg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,9 @@ public class Home_Page extends AppCompatActivity implements BottomNavigationView
 
         BottomNavigationView navView = findViewById (R.id.nav_view);
         navView.setOnNavigationItemSelectedListener (this);
+        navView.setSelectedItemId (R.id.navigation_home);
+        fg = new Fragment_Home_Page();
+        loadFragment (fg);
 
     }
 

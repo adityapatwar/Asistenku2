@@ -69,11 +69,24 @@
 
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="437dp"
+        android:orientation="vertical" >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/aboutikhsan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/cekungan1"
+        android:background="@drawable/backgroundputih"
         android:layout_marginTop="34dp"
         android:paddingLeft="40dp"
         android:paddingTop="10dp"
@@ -89,10 +102,10 @@
             android:padding="4dp"
             >
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/ikhsan"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ikhsan"/>
 
         </LinearLayout>
 
@@ -124,16 +137,28 @@
 
 
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/info1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/cekunginfoputih"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
 
     <LinearLayout
+        android:id="@+id/aboutadit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingRight="40dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="#F4F4F4"
+        android:background="@drawable/backgroundabu"
 
         >
+
 
         <LinearLayout
             android:layout_width="0dp"
@@ -181,13 +206,23 @@
 
 
     </LinearLayout>
+        <LinearLayout
+            android:id="@+id/info2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/cekunginfoabu"
+            android:orientation="vertical">
+
+        </LinearLayout>
     <LinearLayout
+        android:id="@+id/aboutaziz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffff"
+        android:background="@drawable/backgroundputih"
         android:paddingLeft="40dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+
         >
 
         <LinearLayout
@@ -233,13 +268,22 @@
 
 
     </LinearLayout>
+        <LinearLayout
+            android:id="@+id/info3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/cekunginfoputih"
+            android:orientation="vertical">
+
+        </LinearLayout>
     <LinearLayout
+        android:id="@+id/aboutazril"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingRight="40dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="#F5F5F5"
+        android:background="@drawable/backgroundabu"
         >
 
         <LinearLayout
@@ -289,14 +333,39 @@
 
 
     </LinearLayout>
+        <LinearLayout
+            android:id="@+id/info4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/cekunginfoabu"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/wave"
+        </LinearLayout>
 
-        >
 
     </LinearLayout>
+
+</ScrollView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:foregroundGravity="bottom"
+            android:src="@drawable/wave"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

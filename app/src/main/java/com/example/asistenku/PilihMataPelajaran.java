@@ -31,17 +31,14 @@ public class PilihMataPelajaran extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_pilih_mata_pelajaran, container, false);
-//       ListView lv = (ListView)rootView.findViewById(R.id.listView);
 
-//        ArrayList<MataPelajaran> listContact = GetlistContact();
-//       lv.setAdapter(new AdapterFragmentPelajaran (getActivity(), listContact));
+        rootView = inflater.inflate(R.layout.fragment_pilih_mata_pelajaran, container, false);
+
 
         mataPelajarans = new ArrayList<> ();
         listView =(ListView)rootView.findViewById(R.id.listView);
 
         mataPelajarans.add(new MataPelajaran ("Matematika", R.drawable.icon_math ));
-
 
         AdapterFragmentPelajaran adapter = new AdapterFragmentPelajaran(getActivity (), R.layout.activity_custom_listview_matapelajaran, mataPelajarans);
 

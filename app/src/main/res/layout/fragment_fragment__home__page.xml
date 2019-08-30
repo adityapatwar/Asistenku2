@@ -5,147 +5,381 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment_Home_Page"
     android:orientation="vertical"
-    android:background="#f1f1f1">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    android:background="#FBFAFB">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="20dp"
-        android:layout_margin="24dp"
-        android:background="@drawable/cekungan1"
-
         >
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="20dp"
-            >
-
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                >
-                <ImageView
-                    android:id="@+id/iv_masukkelas"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/icon_masuk_kelas"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Materi"
-                    />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/cekungan1"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/iv_masukkelas"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/icon_masuk_kelas"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Materi"
+                                />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+
+                            <ImageView
+                                android:id="@+id/iv_daftartugas"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/icon_list_tugas"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Daftar Tugas"
+                                />
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/iv_nilai"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/icon_nilai"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Nilai"
+                                />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+                            <ImageView
+                                android:id="@+id/iv_ruangdiskusi"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/icon_ruang_diskusi"/>
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Ruang Diskusi"
+                                />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
+        </ScrollView>
+
+        <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                >
+                android:layout_marginTop="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/iv_daftartugas"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/icon_list_tugas"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Daftar Tugas"
-                    />
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/itemSlid2"
+                        android:layout_width="300dp"
+                        android:layout_height="180dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:background="#ffff"
+                        android:orientation="horizontal">
 
 
-            </LinearLayout>
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_masuk_kelas" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
 
+                            <TextView
+                                android:id="@+id/titleBook2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="34dp"
+                                android:text="Masuk Kelas"
+                                android:textColor="#A1A8FD"
+                                android:textSize="22sp" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingBottom="10dp"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                >
-                <ImageView
-                    android:id="@+id/iv_nilai"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/icon_nilai"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Nilai"
-                    />
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
-                >
-                <ImageView
-                    android:id="@+id/iv_ruangdiskusi"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/icon_ruang_diskusi"/>
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="18sp"
-                    android:text="Ruang Diskusi"
-                    />
-            </LinearLayout>
+                            <TextView
+                                android:id="@+id/titleAuthor1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="6dp"
+                                android:text="Fitur"
+                                android:textColor="#A1A8FD"
+                                android:textSize="16sp" />
 
 
 
-        </LinearLayout>
+                        </LinearLayout>
 
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/itemSlid1"
+                        android:layout_width="300dp"
+                        android:layout_height="180dp"
+                        android:layout_marginRight="24dp"
+                        android:background="#ffff"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_list_tugas" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/titleBook1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="34dp"
+                                android:text="Daftar Tugas"
+                                android:textColor="#A1A8FD"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/titleAuthor2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="6dp"
+                                android:text="Fitur"
+                                android:textColor="#A1A8FD"
+                                android:textSize="16sp" />
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fiturnilai"
+                        android:layout_width="300dp"
+                        android:layout_height="180dp"
+                        android:layout_marginRight="24dp"
+                        android:background="#ffff"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_nilai" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/iconnilai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="34dp"
+                                android:text="Nilai"
+                                android:textColor="#A1A8FD"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/judulnilai"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="6dp"
+                                android:text="Fitur"
+                                android:textColor="#A1A8FD"
+                                android:textSize="16sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/itemSlid"
+                        android:layout_width="300dp"
+                        android:layout_height="180dp"
+                        android:layout_marginRight="24dp"
+                        android:background="#ffff"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="22dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/icon_ruang_diskusi" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/titleBook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="34dp"
+                                android:text="Nilai"
+                                android:textColor="#A1A8FD"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:id="@+id/titleAuthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="6dp"
+                                android:text="Kathian Brands"
+                                android:textColor="#A1A8FD"
+                                android:textSize="16sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
 
 
     </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
 
 </FrameLayout>

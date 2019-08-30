@@ -9,71 +9,78 @@
     >
 
     <FrameLayout
+        android:id="@+id/frameLayout2"
         android:layout_width="411dp"
         android:layout_height="512dp"
         android:background="@drawable/bg_login_versidua"
-        tools:layout_editor_absoluteX="0dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
 
     </FrameLayout>
 
     <FrameLayout
         android:id="@+id/imageView2"
-        android:layout_width="130dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="52dp"
+        android:layout_width="140dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="37dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         >
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/logoa"
-
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user_blue"/>
 
 
     </FrameLayout>
 
     <Button
         android:id="@+id/tombol_login"
-        android:layout_width="138dp"
+        android:layout_width="158dp"
         android:layout_height="30dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="8dp"
         android:background="@android:color/white"
         android:text="Login"
         android:textSize="20sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
 
         />
     <TextView
         android:id="@+id/tv_forgotpassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#f1f1f1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tombol_login"
-        android:text="Forgot Password ?"
+        android:text="Forgot Password ? Click Here!"
         />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView2"
 
 
         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:text="Login here"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ffff"/>
 
         <EditText
 
@@ -98,7 +105,7 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/linearLayout"
@@ -125,23 +132,108 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_aboutpage"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Contack us"
-        android:textAllCaps="false"
-        android:textColor="#000"
-        android:textSize="20sp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        >
+
+        <EditText
+            android:id="@+id/et_sekolah"
+            android:layout_width="268dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:editable="false"
+            android:hint="Sekolah"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:background="@drawable/bg_iconedittext"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="279dp"
+            />
+        <Spinner
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/spinner_sekolah"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_favorite_black_24dp"
+            android:layout_marginRight="3dp"
+            />
+        <TextView
+            android:id="@+id/tv_aboutpage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Development By"
+            android:textAllCaps="false"
+            android:textColor="#463F3A"
+            android:textSize="15sp"
+            />
+        <TextView
+            android:id="@+id/tv_aboutpage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:text="NMPROduction"
+            android:textAllCaps="false"
+            android:textColor="#463F3A"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/imageView3"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
 
-        />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logoa"
+
+            />
+
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

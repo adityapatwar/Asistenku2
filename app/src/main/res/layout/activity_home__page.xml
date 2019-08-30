@@ -12,14 +12,13 @@
     android:layout_height="match_parent"
     tools:context=".Home_Page">
 
-    <com.google.android.material.navigation.NavigationView
+    <View
         android:layout_width="match_parent"
         android:layout_height="100dp"
         tools:ignore="MissingConstraints"
         android:background="@drawable/bg_bar_nav"
-        >
+        ></View>
 
-    </com.google.android.material.navigation.NavigationView>
 
     <FrameLayout
         android:id="@+id/fragment_container"

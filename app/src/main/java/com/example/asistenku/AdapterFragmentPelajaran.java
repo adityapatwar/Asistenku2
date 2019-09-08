@@ -47,20 +47,7 @@ public class AdapterFragmentPelajaran extends ArrayAdapter<MataPelajaran> {
         imageView.setImageDrawable(context.getResources().getDrawable(mataPelajaran.getImage()));
         txtname.setText(mataPelajaran.getName_pelajaran ());
 
-//        ViewHolder holder;
-//        if(view == null){
-//            view = mInflater.inflate(R.layout.activity_custom_listview_matapelajaran, null);
-//            holder = new ViewHolder();
-//            holder.txtname = (TextView) view.findViewById(R.id.tv_CustomPelajaran);
-//            holder.imageView = (ImageView) view.findViewById(R.id.ImageViewCustomMataPelajaran);
-//
-//            view.setTag(holder);
-//        } else {
-//            holder = (ViewHolder) view.getTag();
-//        }
-//
-//        holder.txtname.setText(listContact.get(position).getName_pelajaran ());
-//        holder.imageView.setImageResource (listContact.get (position).getImage ());
+
         return view;
     }
 

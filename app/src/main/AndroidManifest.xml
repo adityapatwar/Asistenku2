@@ -9,17 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".custom_listview_matapelajaran"
-            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Fitur_Home_RV_Card"></activity>
+        <activity
+            android:name=".custom_listview_matapelajaran"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Home_Page"
             android:label="@string/title_activity_home__page"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".about_page"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".loginAsistenku"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".about_page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginAsistenku"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

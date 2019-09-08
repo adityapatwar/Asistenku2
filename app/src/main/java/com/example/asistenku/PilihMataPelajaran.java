@@ -34,14 +34,10 @@ public class PilihMataPelajaran extends Fragment {
 
         rootView = inflater.inflate(R.layout.fragment_pilih_mata_pelajaran, container, false);
 
-
         mataPelajarans = new ArrayList<> ();
         listView =(ListView)rootView.findViewById(R.id.listView);
-
         mataPelajarans.add(new MataPelajaran ("Matematika", R.drawable.icon_math ));
-
         AdapterFragmentPelajaran adapter = new AdapterFragmentPelajaran(getActivity (), R.layout.activity_custom_listview_matapelajaran, mataPelajarans);
-
         listView.setAdapter(adapter);
 
         return rootView;
@@ -55,12 +51,6 @@ public class PilihMataPelajaran extends Fragment {
     }
 
 
-//    private ArrayList<MataPelajaran> GetlistContact(){
-//        ArrayList<MataPelajaran> contactlist = new ArrayList<MataPelajaran>();
-//
-//        contactlist.add(new MataPelajaran ( "Matematika",R.drawable.icon_math));
-//
-//        return contactlist;
-//    }
+
 
 }

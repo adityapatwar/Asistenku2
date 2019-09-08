@@ -75,7 +75,7 @@ public class about_page extends AppCompatActivity  {
                         ilang.setVisibility (View.GONE);
                     }
                 };
-                hand.postDelayed (nyaa,700);
+                hand.postDelayed (nyaa,500);
                 viewmuncul(v,ilang);
 //
             }
@@ -95,7 +95,7 @@ public class about_page extends AppCompatActivity  {
                         ilang.setVisibility (View.GONE);
                     }
                 };
-                hand.postDelayed (nyaa,700);
+                hand.postDelayed (nyaa,500);
                 viewmuncul(ikhsan,ilang);
 //
             }

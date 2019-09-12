@@ -1,6 +1,7 @@
 package com.example.asistenku;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Build;
@@ -11,6 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Handler;
 import android.util.Log;
@@ -18,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -27,6 +31,8 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -48,6 +54,13 @@ public class Fragment_Home_Page extends Fragment {
     }
     HorizontalScrollView hv;
     LinearLayout slide1,slide2,slide3;
+    RecyclerView recyclerView;
+    EditText edtName,edtAge;
+    Button btnSubmit;
+    RecyclerView.LayoutManager layoutManager;
+    Context context;
+    List<Siswa> listPersonInfo;
+    boolean test = true;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -90,10 +103,15 @@ public class Fragment_Home_Page extends Fragment {
         slide1 = view.findViewById (R.id.itemSlid);
         slide2 = view.findViewById (R.id.itemSlid1);
         slide3 = view.findViewById (R.id.itemSlid2);
-//        scroll();
 
-
-
+        listPersonInfo = new ArrayList<> ();
+        context = getActivity ();
+        recyclerView = view.findViewById (R.id.rv_absen);
+        layoutManager = new LinearLayoutManager (context);
+        recyclerView.setLayoutManager (layoutManager);
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        SiswaAdapter adapter = new SiswaAdapter(getActivity (),listPersonInfo);
+        recyclerView.setAdapter(adapter);
 
     }
 //
@@ -116,6 +134,8 @@ public class Fragment_Home_Page extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
 
         View view = inflater.inflate (R.layout.fragment_fragment__home__page, null, false);
 

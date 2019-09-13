@@ -261,7 +261,7 @@
             >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="120dp"
                 android:orientation="vertical"
                 android:layout_weight="1"
                 android:layout_marginStart="10dp"
@@ -273,10 +273,10 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:text="Lihat Absen"
-                    android:textSize="8sp"
+                    android:textSize="10sp"
                     android:textColor="#fff"
                     android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="45dp"
+                    android:layout_marginEnd="80dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     />
@@ -292,8 +292,9 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
+                android:layout_width="389dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="-10dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="100dp"
@@ -315,10 +316,10 @@
                     app:layout_constraintTop_toTopOf="parent" />
                 <LinearLayout
                     android:id="@+id/lv_absen"
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/ic_bg_total_siswa"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="170dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/corners"
+                    android:layout_marginTop="15dp"
                     android:layout_marginStart="40dp"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -327,14 +328,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="TEST"
+                        android:text="Total Siswa : 26 Orang"
                         />
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/v_alfa"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginBottom="5dp"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginBottom="15dp"
                     android:layout_marginEnd="35dp"
                     android:background="@drawable/ic_bg_alfa"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -350,8 +351,8 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/v_izin"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
                     android:layout_marginEnd="35dp"
                     android:background="@drawable/ic_bg_izin"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -366,10 +367,10 @@
                 </LinearLayout>
                 <LinearLayout
                     android:id="@+id/v_hadir"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="35dp"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
                     android:background="@drawable/ic_bg_hadir"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"

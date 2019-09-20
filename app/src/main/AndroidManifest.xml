@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AbsenSiswa"></activity>
+        <activity android:name=".PilihPertemuan"></activity>
+        <activity android:name=".pilihMataPelajaranA" />
+        <activity android:name=".AbsenSiswa" />
         <activity android:name=".Fitur_Home_RV_Card" />
         <activity
             android:name=".custom_listview_matapelajaran"

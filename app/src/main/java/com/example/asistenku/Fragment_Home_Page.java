@@ -10,6 +10,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -55,12 +56,13 @@ public class Fragment_Home_Page extends Fragment {
     HorizontalScrollView hv;
     LinearLayout slide1,slide2,slide3;
     RecyclerView recyclerView;
-    EditText edtName,edtAge;
-    Button btnSubmit;
+    ConstraintLayout cl,cl2;
+    TextView tview;
+    ImageView iview;
     RecyclerView.LayoutManager layoutManager;
     Context context;
     List<Siswa> listPersonInfo;
-    boolean test = true;
+
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -72,9 +74,9 @@ public class Fragment_Home_Page extends Fragment {
         ImageView iv_MasukKelas = (ImageView) view.findViewById (R.id.iv_masukkelas);
         iv_MasukKelas.setOnClickListener (new View.OnClickListener() {
             public void onClick(View view) {
+            Intent masukKelas = new Intent (getActivity (),pilihMataPelajaranA.class);
+            startActivity (masukKelas);
 
-               final Fragment fg= new PilihMataPelajaran ();
-                replaceFragment(fg);
             }
         });
 
@@ -104,16 +106,73 @@ public class Fragment_Home_Page extends Fragment {
         slide2 = view.findViewById (R.id.itemSlid1);
         slide3 = view.findViewById (R.id.itemSlid2);
 
+        iview = view.findViewById (R.id.iv_lihatabsen);
+        tview = view.findViewById (R.id.tv_lihatabsen);
+        cl = view.findViewById (R.id.cl_bottom);
+        cl2 = view.findViewById (R.id.cl_top);
+
         listPersonInfo = new ArrayList<> ();
         context = getActivity ();
         recyclerView = view.findViewById (R.id.rv_absen);
         layoutManager = new LinearLayoutManager (context);
         recyclerView.setLayoutManager (layoutManager);
         listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
+        listPersonInfo.add(new Siswa ("Aditya", "Hadir" ));
         SiswaAdapter adapter = new SiswaAdapter(getActivity (),listPersonInfo);
         recyclerView.setAdapter(adapter);
 
+        init (cl);
+        viewmuncul (cl2,cl);
+        viewmuncul (iview,cl);
+        viewmuncul (tview,cl);
+
     }
+
+    private void init(View info){
+        info.setVisibility (View.GONE);
+        info.setAlpha(0);
+        info.setTranslationY(-100);
+    }
+
+    private void viewmuncul(final View v,final View muncul){
+        v.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                muncul.setVisibility (View.VISIBLE);
+                muncul.animate().alpha(1).translationY(0).setDuration(800).start();
+                viewilang (v,muncul);
+            }
+        });
+    }
+
+    private void viewilang(final View v,final View ilang)
+    {
+        v.setOnClickListener (new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+
+                ilang.animate().alpha(0).translationY(-100).setDuration(800).start();
+                Handler hand =  new Handler ();
+                Runnable nyaa =  new Runnable () {
+                    @Override
+                    public void run() {
+                        ilang.setVisibility (View.GONE);
+                    }
+                };
+                hand.postDelayed (nyaa,900);
+                viewmuncul(v,ilang);
+//
+            }
+        });
+    }
+
 //
 //    private void delay(){
 //        new Handler ().postDelayed(new Runnable() {
@@ -160,13 +219,11 @@ public class Fragment_Home_Page extends Fragment {
     private void replaceFragment(Fragment newFragment) {
         FragmentTransaction trasection = getFragmentManager ().beginTransaction ();
 
-        //FragmentTransaction trasection =
         getFragmentManager ().beginTransaction ();
         trasection.replace (R.id.fragment_container, newFragment);
         trasection.setCustomAnimations (R.anim.fadein, R.anim.fadein );
         trasection.addToBackStack (null);
         trasection.commit ();
-
 
         }
     }
